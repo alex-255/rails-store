@@ -3,8 +3,8 @@
 <% cache @product do %>
   <h1><%= @product.name %></h1>
   <%= @product.description %>
-  <p>In warehouse: <%= @product.inventory_count %></p>
 <% end %>
+<%= render "inventory", product: @product %>
 
 <%= link_to "Back", products_path %>
 <% if authenticated? %>
